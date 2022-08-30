@@ -1,0 +1,70 @@
+{
+    "BUILDER_TARGETS" = (
+	all,
+	install,
+	uninstall,
+	clean,
+	distclean,
+	dist
+    );
+    "CLASS_FILES" = (
+    );
+    COMPILEROPTIONS = "";
+    CPPOPTIONS = "";
+    "CREATION_DATE" = "2022-08-27 23:30:40 +0300";
+    "DOCU_FILES" = (
+    );
+    FRAMEWORKS = (
+    );
+    "HEADER_FILES" = (
+    );
+    IMAGES = (
+    );
+    INSTALLDIR = "$(HOME)/GNUstep/Tools";
+    LANGUAGE = English;
+    LIBRARIES = (
+	"gnustep-base"
+    );
+    LINKEROPTIONS = "";
+    "LOCALIZED_RESOURCES" = (
+    );
+    MAKEFILEDIR = "$(GNUSTEP_MAKEFILES)";
+    "OBJC_COMPILEROPTIONS" = "";
+    "OTHER_RESOURCES" = (
+	Version
+    );
+    "OTHER_SOURCES" = (
+	"main.m"
+    );
+    "PROJECT_AUTHORS" = (
+	"CMDR-DiTRay"
+    );
+    "PROJECT_COPYRIGHT" = "Copyright (C) 2022";
+    "PROJECT_COPYRIGHT_DESC" = "Released under GPLv3";
+    "PROJECT_CREATOR" = "\U0424\U0438\U043B\U0438\U043F\U043F,,,";
+    "PROJECT_DESCRIPTION" = "Utility to check custom configuration files";
+    "PROJECT_GROUP" = "No group available!";
+    "PROJECT_MAINTAINER" = "\U0424\U0438\U043B\U0438\U043F\U043F,,,";
+    "PROJECT_NAME" = "plist_test";
+    "PROJECT_RELEASE" = "0.1 (August 2022)";
+    "PROJECT_SUMMARY" = "No summary available!";
+    "PROJECT_TYPE" = Tool;
+    "PROJECT_URL" = "https://github.com/CMDR-DiTRay/DiTRain/plist_test";
+    "SEARCH_HEADER_DIRS" = (
+    );
+    "SEARCH_LIB_DIRS" = (
+    );
+    SUBPROJECTS = (
+    );
+    "SUPPORTING_FILES" = (
+	"GNUmakefile.preamble",
+	GNUmakefile,
+	"GNUmakefile.postamble",
+	"plist_testInfo.plist"
+    );
+    TOOLICON = "";
+    "USER_LANGUAGES" = (
+	Russian,
+	English
+    );
+}

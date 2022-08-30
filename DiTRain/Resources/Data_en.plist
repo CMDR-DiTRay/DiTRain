@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Views</key>
+  <array>
+    <dict>
+      <key>Name</key>
+      <string>Rope skipping</string>
+      <key>Time</key>
+      <integer>60</integer>
+      <key>Image</key>
+      <string>Skipping.png</string>
+    </dict>
+    <dict>
+      <key>Name</key>
+      <string>Pelvic lifts</string>
+      <key>Time</key>
+      <integer>30</integer>
+      <key>Image</key>
+      <string>Lifts.png</string>
+    </dict>
+    <dict>
+      <key>Name</key>
+      <string>Rope skipping</string>
+      <key>Time</key>
+      <integer>60</integer>
+      <key>Image</key>
+      <string>Skipping.png</string>
+    </dict>
+    <dict>
+      <key>Name</key>
+      <string>Pelvic lifts</string>
+      <key>Time</key>
+      <integer>30</integer>
+      <key>Image</key>
+      <string>Lifts.png</string>
+    </dict>
+    <dict>
+      <key>Name</key>
+      <string>Rope skipping</string>
+      <key>Time</key>
+      <integer>60</integer>
+      <key>Image</key>
+      <string>Skipping.png</string>
+    </dict>
+    <dict>
+      <key>Name</key>
+      <string>Pelvic lifts</string>
+      <key>Time</key>
+      <integer>30</integer>
+      <key>Image</key>
+      <string>Lifts.png</string>
+    </dict>
+    <dict>
+      <key>Name</key>
+      <string>Rope skipping</string>
+      <key>Time</key>
+      <integer>60</integer>
+      <key>Image</key>
+      <string>Skipping.png</string>
+    </dict>
+    <dict>
+      <key>Name</key>
+      <string>Reverse crunches</string>
+      <key>Time</key>
+      <integer>30</integer>
+      <key>Image</key>
+      <string>Reverse.png</string>
+    </dict>
+    <dict>
+      <key>Name</key>
+      <string>Rope skipping</string>
+      <key>Time</key>
+      <integer>60</integer>
+      <key>Image</key>
+      <string>Skipping.png</string>
+    </dict>
+    <dict>
+      <key>Name</key>
+      <string>Reverse crunches</string>
+      <key>Time</key>
+      <integer>30</integer>
+      <key>Image</key>
+      <string>Reverse.png</string>
+    </dict>
+    <dict>
+      <key>Name</key>
+      <string>Rope skipping</string>
+      <key>Time</key>
+      <integer>60</integer>
+      <key>Image</key>
+      <string>Skipping.png</string>
+    </dict>
+    <dict>
+      <key>Name</key>
+      <string>Reverse crunches</string>
+      <key>Time</key>
+      <integer>30</integer>
+      <key>Image</key>
+      <string>Reverse.png</string>
+    </dict>
+    <dict>
+      <key>Name</key>
+      <string>Rope skipping</string>
+      <key>Time</key>
+      <integer>60</integer>
+      <key>Image</key>
+      <string>Skipping.png</string>
+    </dict>
+    <dict>
+      <key>Name</key>
+      <string>Reverse crunches</string>
+      <key>Time</key>
+      <integer>30</integer>
+      <key>Image</key>
+      <string>Reverse.png</string>
+    </dict>
+    <dict>
+      <key>Name</key>
+      <string>Rope skipping</string>
+      <key>Time</key>
+      <integer>60</integer>
+      <key>Image</key>
+      <string>Skipping.png</string>
+    </dict>
+    <dict>
+      <key>Name</key>
+      <string>Side crunches</string>
+      <key>Time</key>
+      <integer>30</integer>
+      <key>Image</key>
+      <string>Side.png</string>
+    </dict>
+    <dict>
+      <key>Name</key>
+      <string>Rope skipping</string>
+      <key>Time</key>
+      <integer>60</integer>
+      <key>Image</key>
+      <string>Skipping.png</string>
+    </dict>
+    <dict>
+      <key>Name</key>
+      <string>Side crunches</string>
+      <key>Time</key>
+      <integer>30</integer>
+      <key>Image</key>
+      <string>Side.png</string>
+    </dict>
+    <dict>
+      <key>Name</key>
+      <string>Rope skipping</string>
+      <key>Time</key>
+      <integer>60</integer>
+      <key>Image</key>
+      <string>Skipping.png</string>
+    </dict>
+    <dict>
+      <key>Name</key>
+      <string>Side crunches</string>
+      <key>Time</key>
+      <integer>30</integer>
+      <key>Image</key>
+      <string>Side.png</string>
+    </dict>
+    <dict>
+      <key>Name</key>
+      <string>Rope skipping</string>
+      <key>Time</key>
+      <integer>60</integer>
+      <key>Image</key>
+      <string>Skipping.png</string>
+    </dict>
+    <dict>
+      <key>Name</key>
+      <string>Side crunches</string>
+      <key>Time</key>
+      <integer>30</integer>
+      <key>Image</key>
+      <string>Side.png</string>
+    </dict>
+    <dict>
+      <key>Name</key>
+      <string>Rope skipping</string>
+      <key>Time</key>
+      <integer>60</integer>
+      <key>Image</key>
+      <string>Skipping.png</string>
+    </dict>
+    <dict>
+      <key>Name</key>
+      <string>Diagonal crunches</string>
+      <key>Time</key>
+      <integer>30</integer>
+      <key>Image</key>
+      <string>Side.png</string>
+    </dict>
+    <dict>
+      <key>Name</key>
+      <string>Rope skipping</string>
+      <key>Time</key>
+      <integer>60</integer>
+      <key>Image</key>
+      <string>Skipping.png</string>
+    </dict>
+    <dict>
+      <key>Name</key>
+      <string>Diagonal crunches</string>
+      <key>Time</key>
+      <integer>30</integer>
+      <key>Image</key>
+      <string>Side.png</string>
+    </dict>
+    <dict>
+      <key>Name</key>
+      <string>Rope skipping</string>
+      <key>Time</key>
+      <integer>60</integer>
+      <key>Image</key>
+      <string>Skipping.png</string>
+    </dict>
+    <dict>
+      <key>Name</key>
+      <string>Diagonal crunches</string>
+      <key>Time</key>
+      <integer>30</integer>
+      <key>Image</key>
+      <string>Side.png</string>
+    </dict>
+    <dict>
+      <key>Name</key>
+      <string>Rope skipping</string>
+      <key>Time</key>
+      <integer>60</integer>
+      <key>Image</key>
+      <string>Skipping.png</string>
+    </dict>
+    <dict>
+      <key>Name</key>
+      <string>Diagonal crunches</string>
+      <key>Time</key>
+      <integer>30</integer>
+      <key>Image</key>
+      <string>Side.png</string>
+    </dict>
+    <dict>
+      <key>Name</key>
+      <string>Rope skipping</string>
+      <key>Time</key>
+      <integer>60</integer>
+      <key>Image</key>
+      <string>Skipping.png</string>
+    </dict>
+    <dict>
+      <key>Name</key>
+      <string>Basic crunches</string>
+      <key>Time</key>
+      <integer>30</integer>
+      <key>Image</key>
+      <string>Side.png</string>
+    </dict>
+    <dict>
+      <key>Name</key>
+      <string>Rope skipping</string>
+      <key>Time</key>
+      <integer>60</integer>
+      <key>Image</key>
+      <string>Skipping.png</string>
+    </dict>
+    <dict>
+      <key>Name</key>
+      <string>Basic crunches</string>
+      <key>Time</key>
+      <integer>30</integer>
+      <key>Image</key>
+      <string>Side.png</string>
+    </dict>
+    <dict>
+      <key>Name</key>
+      <string>Rope skipping</string>
+      <key>Time</key>
+      <integer>60</integer>
+      <key>Image</key>
+      <string>Skipping.png</string>
+    </dict>
+    <dict>
+      <key>Name</key>
+      <string>Basic crunches</string>
+      <key>Time</key>
+      <integer>30</integer>
+      <key>Image</key>
+      <string>Side.png</string>
+    </dict>
+    <dict>
+      <key>Name</key>
+      <string>Rope skipping</string>
+      <key>Time</key>
+      <integer>60</integer>
+      <key>Image</key>
+      <string>Skipping.png</string>
+    </dict>
+  </array>
+</dict>
+</plist>
