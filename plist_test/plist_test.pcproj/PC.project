@@ -49,7 +49,7 @@
     "PROJECT_RELEASE" = "0.1 (August 2022)";
     "PROJECT_SUMMARY" = "No summary available!";
     "PROJECT_TYPE" = Tool;
-    "PROJECT_URL" = "https://github.com/CMDR-DiTRay/DiTRain/plist_test";
+    "PROJECT_URL" = "https://github.com/CMDR-DiTRay/DiTRain";
     "SEARCH_HEADER_DIRS" = (
     );
     "SEARCH_LIB_DIRS" = (

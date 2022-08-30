@@ -9,5 +9,5 @@
     ToolDescription = "Utility to check custom configuration files";
     ToolName = "plist_test";
     ToolRelease = "0.1 (August 2022)";
-    URL = "https://github.com/CMDR-DiTRay/DiTRain/plist_test";
+    URL = "https://github.com/CMDR-DiTRay/DiTRain";
 }

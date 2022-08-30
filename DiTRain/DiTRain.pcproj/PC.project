@@ -53,7 +53,7 @@
     "PROJECT_COPYRIGHT" = "Copyright (C) 2022";
     "PROJECT_COPYRIGHT_DESC" = "Released under GPLv3";
     "PROJECT_CREATOR" = "\U0424\U0438\U043B\U0438\U043F\U043F,,,";
-    "PROJECT_DESCRIPTION" = "A sports trianing program                                        ";
+    "PROJECT_DESCRIPTION" = "Sports trianing program                       ";
     "PROJECT_DOCUMENTTYPES" = (
     );
     "PROJECT_GROUP" = "No group avaliable!";
@@ -62,7 +62,7 @@
     "PROJECT_RELEASE" = "0.1 (August 2022)";
     "PROJECT_SUMMARY" = "No summary avaliable!";
     "PROJECT_TYPE" = Application;
-    "PROJECT_URL" = "https://github.com/CMDR-DiTRay/DiTRain/DiTRain";
+    "PROJECT_URL" = "https://github.com/CMDR-DiTRay/DiTRain";
     "SEARCH_HEADER_DIRS" = (
     );
     "SEARCH_LIB_DIRS" = (

@@ -20,43 +20,31 @@ endif
 include $(GNUSTEP_MAKEFILES)/common.make
 
 #
-# Application
+# Tool
 #
 VERSION = 0.1 (August 2022)
-PACKAGE_NAME = DiTRain
-APP_NAME = DiTRain
-DiTRain_APPLICATION_ICON = 
+PACKAGE_NAME = plist_test
+TOOL_NAME = plist_test
+plist_test_TOOL_ICON = 
 
 
 #
 # Resource files
 #
-DiTRain_RESOURCE_FILES = \
-Resources/DiTRain.gorm \
+plist_test_RESOURCE_FILES = \
+Resources/Version \
 
-
-#
-# Header files
-#
-DiTRain_HEADER_FILES = \
-AppController.h
-
-#
-# Objective-C Class files
-#
-DiTRain_OBJC_FILES = \
-AppController.m
 
 #
 # Other sources
 #
-DiTRain_OBJC_FILES += \
-DiTRain_main.m 
+plist_test_OBJC_FILES += \
+main.m 
 
 #
 # Makefiles
 #
 -include GNUmakefile.preamble
 include $(GNUSTEP_MAKEFILES)/aggregate.make
-include $(GNUSTEP_MAKEFILES)/application.make
+include $(GNUSTEP_MAKEFILES)/tool.make
 -include GNUmakefile.postamble
