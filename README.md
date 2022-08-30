@@ -1,5 +1,5 @@
 # DiTRain
-A sports trianing program
+Sports training program
 
 This is a meta repository for the program itself and it's development utililties. If you are interested in the program itself you can visit correponding sub-repository called "DiTRain" ([DiTRain](https://github.com/CMDR-DiTRay/DiTRain/tree/main/DiTRain)).
 
