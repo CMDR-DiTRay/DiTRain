@@ -12,7 +12,8 @@
     );
     "BUNDLE_IDENTIFIER" = "";
     "CLASS_FILES" = (
-	"AppController.m"
+	"AppController.m",
+	"View.m"
     );
     COMPILEROPTIONS = "";
     CPPOPTIONS = "";
@@ -22,7 +23,8 @@
     FRAMEWORKS = (
     );
     "HEADER_FILES" = (
-	"AppController.h"
+	"AppController.h",
+	"View.h"
     );
     IMAGES = (
     );
@@ -30,7 +32,7 @@
     INTERFACES = (
 	"DiTRain.gorm"
     );
-    LANGUAGE = English;
+    LANGUAGE = Russian;
     LIBRARIES = (
 	"gnustep-base",
 	"gnustep-gui"
@@ -42,6 +44,7 @@
     MAKEFILEDIR = "$(GNUSTEP_MAKEFILES)";
     "OBJC_COMPILEROPTIONS" = "";
     "OTHER_RESOURCES" = (
+	"ExcersisesEng.plist"
     );
     "OTHER_SOURCES" = (
 	"DiTRain_main.m"

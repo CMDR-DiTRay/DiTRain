@@ -1,8 +1,11 @@
 {
     "fsn_info_type" = <*I0>;
-    geometry = "268 616 450 350 0 0  1920 1080 ";
+    geometry = "269 615 450 350 0 0  1920 1080 ";
+    iconposition = <*I5>;
+    iconsize = <*I48>;
+    labeltxtsize = <*I12>;
     lastselection = (
-	"/home/philip/Desktop/DiTRain/DiTRain.pcproj"
+	"/home/philip/my_repos/DiTRain/DiTRain"
     );
     shelfdicts = (
     );

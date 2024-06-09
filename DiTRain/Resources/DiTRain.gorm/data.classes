@@ -2,16 +2,36 @@
     "## Comment" = "Do NOT change this file, Gorm maintains it";
     AppController = {
 	Actions = (
+	    "backPressed:",
+	    "nextPressed:",
+	    "timerPressed:",
 	    "showPrefPanel:"
 	);
 	Outlets = (
+	    nameLabel,
+	    currentImage,
+	    timerLabel,
+	    backButton,
+	    nextButton,
+	    timerButton
 	);
 	Super = NSObject;
     };
     FirstResponder = {
 	Actions = (
+	    "backPressed:",
+	    "nextPressed:",
 	    "orderFrontFontPanel:",
-	    "showPrefPanel:"
+	    "previousPressed:",
+	    "showPrefPanel:",
+	    "timerPressed:"
+	);
+	Super = NSObject;
+    };
+    View = {
+	Actions = (
+	);
+	Outlets = (
 	);
 	Super = NSObject;
     };

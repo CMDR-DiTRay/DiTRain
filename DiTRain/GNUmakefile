@@ -33,19 +33,22 @@ DiTRain_APPLICATION_ICON =
 #
 DiTRain_RESOURCE_FILES = \
 Resources/DiTRain.gorm \
+Resources/ExcersisesEng.plist 
 
 
 #
 # Header files
 #
 DiTRain_HEADER_FILES = \
-AppController.h
+AppController.h \
+View.h
 
 #
 # Objective-C Class files
 #
 DiTRain_OBJC_FILES = \
-AppController.m
+AppController.m \
+View.m
 
 #
 # Other sources
