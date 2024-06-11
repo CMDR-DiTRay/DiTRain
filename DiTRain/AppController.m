@@ -13,41 +13,34 @@
 @implementation TimeString : NSString
 + (NSString *) stringFromInt: (unsigned) number
 {
-  NSString * str = [[NSString alloc] initWithString: @""];
-  unsigned tmpl    = 0,
-           tmpr    = number,
-           divider = 3600;
-  BOOL     started = NO,
-           first    = YES;
+  NSString * str       = [[NSString alloc] initWithString: @""];
+  NSString * hourStr   = [[NSString alloc] initWithString: @""];
+  NSString * minuteStr = [[NSString alloc] initWithString: @""];
+  NSString * secondStr = [[NSString alloc] initWithString: @""];
+  
+  unsigned hour   = 0,
+           minute = 0,
+           second = 0;
            
-  do
-  {
-    tmpl = tmpr / divider;
-    tmpr = tmpr % divider;
-    if ((tmpl == 0) && (tmpr > 0) && !started)
-    {
-      divider /= 60;
-      continue;
-    }
-    started = YES;
-    if ((tmpl < 10) && !first)
-    {
-      str = [NSString stringWithFormat: @"%@0%u", str, tmpl];
-    }
-    else
-    {
-      str = [NSString stringWithFormat: @"%@%u", str, tmpl];
-    }
-    if (divider >= 60)
-    {
-      str = [NSString stringWithFormat: @"%@:", str];
-    } else if ((number / 60) == 0)
-    {
-      str = [NSString stringWithFormat: @"0:%@", str];
-    }
-    divider /= 60;
-    first = NO;
-  } while ((divider >= 1) > 0);
+  hour   = number / 3600;
+  minute = (number % 3600) / 60;
+  second = number % 60;
+  
+  if (hour > 0)
+    hourStr   = [NSString stringWithFormat: @"%u:",   hour];
+  
+  if ((hour > 0) && (minute < 10))
+    minuteStr = [NSString stringWithFormat: @"0%u:", minute];
+  else
+    minuteStr = [NSString stringWithFormat: @"%u:", minute];
+  secondStr = [NSString stringWithFormat: @"%u", second];
+  
+  if (second < 10)
+    secondStr = [NSString stringWithFormat: @"0%u", second];
+  else
+    secondStr = [NSString stringWithFormat: @"%u", second];
+  
+  str = [NSString stringWithFormat: @"%@%@%@", hourStr, minuteStr, secondStr];
   
   return str;
 }
@@ -57,6 +50,10 @@
 
 - (IBAction) backPressed: (id) sender
 {
+  [timer invalidate];
+  timer = nil;
+  [timerButton setTitle: [self buttonTitleStart: YES]];
+
   if ([nextButton isHidden])
     [nextButton setHidden: NO];
 
@@ -64,6 +61,9 @@
 
   [view updateFromArray: views atIndex: index];
   [self printCurrentTitle];
+  timeCounter = [view time];
+  [timerLabel setStringValue: [TimeString stringFromInt: timeCounter]];
+  [currentImage setImage: [view image]];
   
   if (index == 0)
     [backButton setHidden: YES];
@@ -71,6 +71,10 @@
 
 - (IBAction) nextPressed: (id) sender
 {
+  [timer invalidate];
+  timer = nil;
+  [timerButton setTitle: [self buttonTitleStart: YES]];
+
   if ([backButton isHidden])
     [backButton setHidden: NO];
 
@@ -78,6 +82,9 @@
     
   [view updateFromArray: views atIndex: index];
   [self printCurrentTitle];
+  timeCounter = [view time];
+  [timerLabel setStringValue: [TimeString stringFromInt: timeCounter]];
+  [currentImage setImage: [view image]];
   
   if (([views count] - 1) == index && ![nextButton isHidden])
     [nextButton setHidden: YES];
@@ -92,11 +99,11 @@
   {
     [timer invalidate];
     timer = nil;
-    [timerButton setTitle: @"Start"];
+    [timerButton setTitle: [self buttonTitleStart: YES]];
     return;
   }
   
-  [timerButton setTitle: @"Stop"];
+  [timerButton setTitle: [self buttonTitleStart: NO]];
   
   timer = [NSTimer scheduledTimerWithTimeInterval:1.0
            target:self
@@ -123,36 +130,10 @@
 
 - (id) init
 {
-  NSString *plistPath =
-  [
-    [
-      [NSBundle mainBundle] resourcePath
-    ] stringByAppendingPathComponent:@"ExcersisesEng.plist"
-  ];
-
-  NSFileManager *fileManager = [NSFileManager defaultManager];
-  if (![fileManager fileExistsAtPath: plistPath])
-  {
-    NSLog(@"File \"%@\" does not exist. Quitting...", plistPath);
-    [self release];
-    self = nil;
-    exit(1);
-  }
-  
   if ((self = [super init]))
   {
-    NSDictionary * plistDict = [
-      [NSDictionary alloc]  initWithContentsOfFile: plistPath
-    ];
-    views = [[NSArray alloc] initWithArray: [plistDict objectForKey: @"Views"]];
-    
-    if (views == nil)
-    {
-      NSLog(@"No views");
-      [self release];
-      return nil;
-    }
-    
+    lang = [[NSString alloc] init];
+    currentImage = [[NSImageView alloc] init];
     view = [[View alloc] init];
     index = 0;
     timer = nil;
@@ -187,6 +168,50 @@
 
 - (void) applicationDidFinishLaunching: (NSNotification *)aNotif
 {
+  // Detect language
+  if ([[timerButton title] containsString: @"Старт"])
+    lang = @"RUS";
+  else
+    lang = @"ENG";
+  NSLog(@"Title: %@; Lang: %@", [timerButton title], lang);
+
+  // Select excersises plist according to language
+  NSString * plistName = [[NSString alloc] init];
+  if ([lang isEqualTo: @"ENG"])
+    plistName = @"ExcersisesEng.plist";
+  if ([lang isEqualTo: @"RUS"])
+    plistName = @"ExcersisesRus.plist"; 
+  
+  // Check if excersises plist exists
+  NSString * plistPath = 
+  [
+    [
+      [NSBundle mainBundle] resourcePath
+    ] stringByAppendingPathComponent: plistName
+  ];
+  NSFileManager *fileManager = [NSFileManager defaultManager];
+  if (![fileManager fileExistsAtPath: plistPath])
+  {
+    NSLog(@"File \"%@\" does not exist. Quitting...", plistPath);
+    [self release];
+    self = nil;
+    exit(1);
+  }
+  
+  // Try to load excersises plist
+  NSDictionary * plistDict = [
+    [NSDictionary alloc]  initWithContentsOfFile: plistPath
+  ];
+  views = [[NSArray alloc] initWithArray: [plistDict objectForKey: @"Views"]];
+
+  if (views == nil)
+  {
+    NSLog(@"No views");
+    [self release];
+    exit(1);
+  }
+  
+  // Initialize interface
   [backButton setHidden: YES];
   
   if ([views count] < 2)
@@ -194,7 +219,10 @@
 
   [view updateFromArray: views atIndex: index];
   [self printCurrentTitle];
-  //[timeLabel]
+  timeCounter = [view time];
+  [timerLabel setStringValue: [TimeString stringFromInt: timeCounter]];
+  
+  [currentImage setImage: [view image]];
 }
 
 - (BOOL) applicationShouldTerminate: (id)sender
@@ -223,9 +251,30 @@
     nameLabel setStringValue: 
     [
       NSString stringWithFormat:
-        @"%@ (%d/%d)", [view name], index + 1, [views count]
+        @"%@ (%d/%lu)", [view name], index + 1, [views count]
     ]
   ];
+}
+
+- (NSString *) buttonTitleStart: (BOOL)start
+{
+  NSString * title = [[NSString alloc] init];
+  if ([lang isEqualTo: @"RUS"])
+  {
+    if (start)
+      title = @"Старт";
+    else
+      title = @"Стоп";
+  }
+  else
+  {
+    if (start)
+      title = @"Start";
+    else
+      title = @"Stop";
+  }
+  
+  return title;
 }
 
 - (void) timerTick
@@ -234,8 +283,11 @@
   NSLog(@"Tick...");
   
   if (timeCounter == 0) {
+    [[NSSound soundNamed:@"Glass"] play];
     [timer invalidate];
     timer = nil;
+    
+    [timerButton setTitle: [self buttonTitleStart: YES]];
   }
 }
 

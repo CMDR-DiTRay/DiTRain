@@ -38,10 +38,17 @@
     
   NSString * timeStr = [[views objectAtIndex: i] valueForKey: @"Time"];
   self.time = [timeStr doubleValue];
-  //NSLog(@"Time: %@", self.name);
   
   NSString * imagePath = [[views objectAtIndex: i] valueForKey: @"Image"];
-  self.image = [[NSImage alloc] initWithContentsOfFile: imagePath];
-  //NSLog(@"Name: %@", self.name);
+  imagePath =
+  [
+    [
+      [NSBundle mainBundle] resourcePath
+    ] stringByAppendingPathComponent: [NSString stringWithFormat: @"Images/%@", imagePath]
+  ];
+  [self setImage: nil];
+  NSLog(@"Image path: %@", imagePath);
+  NSImage * tmpImage = [[NSImage alloc] initWithContentsOfFile: imagePath];
+  [self setImage: tmpImage];
 }
 @end

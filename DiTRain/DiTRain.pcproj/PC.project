@@ -32,7 +32,7 @@
     INTERFACES = (
 	"DiTRain.gorm"
     );
-    LANGUAGE = Russian;
+    LANGUAGE = English;
     LIBRARIES = (
 	"gnustep-base",
 	"gnustep-gui"
@@ -44,7 +44,12 @@
     MAKEFILEDIR = "$(GNUSTEP_MAKEFILES)";
     "OBJC_COMPILEROPTIONS" = "";
     "OTHER_RESOURCES" = (
-	"ExcersisesEng.plist"
+	"ExcersisesEng.plist",
+	Images,
+	"DiTRain.tiff",
+	"Russian.lproj",
+	"English.lproj",
+	"ExcersisesRus.plist"
     );
     "OTHER_SOURCES" = (
 	"DiTRain_main.m"
@@ -62,7 +67,7 @@
     "PROJECT_GROUP" = "No group avaliable!";
     "PROJECT_MAINTAINER" = "\U0424\U0438\U043B\U0438\U043F\U043F,,,";
     "PROJECT_NAME" = DiTRain;
-    "PROJECT_RELEASE" = "0.1 (August 2022)";
+    "PROJECT_RELEASE" = "1.0 (August 2024)";
     "PROJECT_SUMMARY" = "No summary avaliable!";
     "PROJECT_TYPE" = Application;
     "PROJECT_URL" = "https://github.com/CMDR-DiTRay/DiTRain";

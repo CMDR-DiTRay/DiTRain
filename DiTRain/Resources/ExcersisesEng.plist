@@ -194,7 +194,7 @@
       <key>Time</key>
       <integer>30</integer>
       <key>Image</key>
-      <string>Side.png</string>
+      <string>Diagonal.png</string>
     </dict>
     <dict>
       <key>Name</key>
@@ -210,7 +210,7 @@
       <key>Time</key>
       <integer>30</integer>
       <key>Image</key>
-      <string>Side.png</string>
+      <string>Diagonal.png</string>
     </dict>
     <dict>
       <key>Name</key>
@@ -226,7 +226,7 @@
       <key>Time</key>
       <integer>30</integer>
       <key>Image</key>
-      <string>Side.png</string>
+      <string>Diagonal.png</string>
     </dict>
     <dict>
       <key>Name</key>
@@ -242,7 +242,7 @@
       <key>Time</key>
       <integer>30</integer>
       <key>Image</key>
-      <string>Side.png</string>
+      <string>Diagonal.png</string>
     </dict>
     <dict>
       <key>Name</key>
@@ -258,7 +258,7 @@
       <key>Time</key>
       <integer>30</integer>
       <key>Image</key>
-      <string>Side.png</string>
+      <string>Basic.png</string>
     </dict>
     <dict>
       <key>Name</key>
@@ -274,7 +274,7 @@
       <key>Time</key>
       <integer>30</integer>
       <key>Image</key>
-      <string>Side.png</string>
+      <string>Basic.png</string>
     </dict>
     <dict>
       <key>Name</key>
@@ -290,7 +290,7 @@
       <key>Time</key>
       <integer>30</integer>
       <key>Image</key>
-      <string>Side.png</string>
+      <string>Basic.png</string>
     </dict>
     <dict>
       <key>Name</key>

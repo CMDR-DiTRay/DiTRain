@@ -20,11 +20,12 @@
 
 @interface AppController : NSObject
 {
-  NSArray * views;
-  NSTimer * timer;
-  View    * view;
-  unsigned  index;
-  unsigned  timeCounter;
+  NSArray  * views;
+  NSTimer  * timer;
+  NSString * lang;
+  View     * view;
+  unsigned   index;
+  unsigned   timeCounter;
   
   IBOutlet NSTextField * nameLabel;
   IBOutlet NSImageView * currentImage;
