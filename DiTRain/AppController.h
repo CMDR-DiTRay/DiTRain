@@ -55,6 +55,8 @@
 - (void) showPrefPanel: (id)sender;
 
 - (void) printCurrentTitle;
+- (NSString *) buttonTitleStart: (BOOL)start;
+- (void) timerTick;
 
 @end
 
