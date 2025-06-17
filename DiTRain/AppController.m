@@ -138,22 +138,6 @@
     index = 0;
     timer = nil;
   }
-  
-  //NSLog(@"R1:  %@",[TimeString stringFromInt: 39662]);
-  //NSLog(@"R2:  %@",[TimeString stringFromInt: 40262]);
-  //NSLog(@"R3:  %@",[TimeString stringFromInt: 40271]);
-  //NSLog(@"R4:  %@",[TimeString stringFromInt: 32462]);
-  //NSLog(@"R5:  %@",[TimeString stringFromInt: 33062]);
-  //NSLog(@"R6:  %@",[TimeString stringFromInt: 33071]);
-  //NSLog(@"R7:  %@",[TimeString stringFromInt: 62]);
-  //NSLog(@"R8:  %@",[TimeString stringFromInt: 662]);
-  //NSLog(@"R9:  %@",[TimeString stringFromInt: 671]);
-  //NSLog(@"R10:  %@",[TimeString stringFromInt: 2]);
-  //NSLog(@"R11:  %@",[TimeString stringFromInt: 11]);
-  //NSLog(@"R12:  %@",[TimeString stringFromInt: 3602]);
-  //NSLog(@"R13:  %@",[TimeString stringFromInt: 3600]);
-  //NSLog(@"R14:  %@",[TimeString stringFromInt: 60]);
-  
   return self;
 }
 

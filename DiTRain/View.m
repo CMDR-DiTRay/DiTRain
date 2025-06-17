@@ -32,12 +32,12 @@
 
 - (void) updateFromArray: (NSArray *) views atIndex: (unsigned) i
 {
-  NSLog(@"I am here!");
   self.name = [[views objectAtIndex: i] objectForKey: @"Name"];
   NSLog(@"Name: %@", self.name);
     
   NSString * timeStr = [[views objectAtIndex: i] valueForKey: @"Time"];
   self.time = [timeStr doubleValue];
+  NSLog(@"Time: %@", timeStr);
   
   NSString * imagePath = [[views objectAtIndex: i] valueForKey: @"Image"];
   imagePath =
