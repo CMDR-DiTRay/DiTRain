@@ -3,6 +3,15 @@
 #
 ifeq ($(GNUSTEP_MAKEFILES),)
  GNUSTEP_MAKEFILES := $(shell gnustep-config --variable=GNUSTEP_MAKEFILES 2>/dev/null)
+  ifeq ($(GNUSTEP_MAKEFILES),)
+    $(warning )
+    $(warning Unable to obtain GNUSTEP_MAKEFILES setting from gnustep-config!)
+    $(warning Perhaps gnustep-make is not properly installed,)
+    $(warning so gnustep-config is not in your PATH.)
+    $(warning )
+    $(warning Your PATH is currently $(PATH))
+    $(warning )
+  endif
 endif
 ifeq ($(GNUSTEP_MAKEFILES),)
  $(error You need to set GNUSTEP_MAKEFILES before compiling!)
@@ -16,20 +25,20 @@ include $(GNUSTEP_MAKEFILES)/common.make
 VERSION = 1.0 (August 2024)
 PACKAGE_NAME = DiTRain
 APP_NAME = DiTRain
-DiTRain_APPLICATION_ICON = \
-DiTRain.tiff
+DiTRain_APPLICATION_ICON = 
 
 
 #
 # Resource files
 #
 DiTRain_RESOURCE_FILES = \
+Resources/DiTRain.gorm \
 Resources/ExcersisesEng.plist \
-Resources/ExcersisesRus.plist \
 Resources/Images \
 Resources/DiTRain.tiff \
+Resources/Russian.lproj \
 Resources/English.lproj \
-Resources/Russian.lproj
+Resources/ExcersisesRus.plist 
 
 
 #
@@ -40,7 +49,7 @@ AppController.h \
 View.h
 
 #
-# Class files
+# Objective-C Class files
 #
 DiTRain_OBJC_FILES = \
 AppController.m \
