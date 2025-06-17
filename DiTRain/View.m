@@ -39,16 +39,22 @@
   self.time = [timeStr doubleValue];
   NSLog(@"Time: %@", timeStr);
   
-  NSString * imagePath = [[views objectAtIndex: i] valueForKey: @"Image"];
-  imagePath =
-  [
-    [
-      [NSBundle mainBundle] resourcePath
-    ] stringByAppendingPathComponent: [NSString stringWithFormat: @"Images/%@", imagePath]
-  ];
-  [self setImage: nil];
+  NSString *imagePath = [[views objectAtIndex: i] valueForKey: @"Image"];
+  NSString *resourcePath = [[NSBundle mainBundle] resourcePath];
+  NSString *fullImagePath = [resourcePath stringByAppendingPathComponent:
+                              [NSString stringWithFormat:
+                                @"Images/%@", imagePath]];
+  
   NSLog(@"Image path: %@", imagePath);
-  NSImage * tmpImage = [[NSImage alloc] initWithContentsOfFile: imagePath];
+  
+  NSImage *tmpImage = [[NSImage alloc] initWithContentsOfFile:fullImagePath];
+
+  if (tmpImage == nil) {
+    NSLog(@"Error loading file: %@", fullImagePath);
+    [tmpImage release];
+    tmpImage = nil;
+  }
+  
   [self setImage: tmpImage];
 }
 @end

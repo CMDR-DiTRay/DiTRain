@@ -26,6 +26,7 @@
 #define _VIEWS_H_
 
 #import <Foundation/Foundation.h>
+#import <AppKit/NSImage.h>
 
 @interface View : NSObject
 {

@@ -25,7 +25,7 @@ include $(GNUSTEP_MAKEFILES)/common.make
 VERSION = 1.0 (August 2024)
 PACKAGE_NAME = DiTRain
 APP_NAME = DiTRain
-DiTRain_APPLICATION_ICON = 
+DiTRain_APPLICATION_ICON = DiTRain.tiff
 
 
 #
