@@ -267,7 +267,8 @@
   NSLog(@"Tick...");
   
   if (timeCounter == 0) {
-    [[NSSound soundNamed:@"Glass"] play];
+    //[[NSSound soundNamed:@"Glass"] play];
+    NSBeep();
     [timer invalidate];
     timer = nil;
     
